@@ -203,6 +203,10 @@ class HtmlDialect(Dialect):
                 'name': 'script',
                 'text': '\n    google.load("jquery", "1.3.2");\n    google.setOnLoadCallback(function() {\n        \n    });\n'
                 },
+            'script:js': {
+                'name': 'script',
+                'attributes': { 'type': 'text/javascript' }
+            },
             'link:css': {
                 'name': 'link',
                 'attributes': { 'rel': 'stylesheet', 'type': 'text/css', 'href': '', 'media': 'all' },
@@ -285,7 +289,7 @@ class HtmlDialect(Dialect):
             'csss': 'link:css',
             'css:src': 'link:css',
             'csssrc': 'link:css',
-            'js': 'script',
+            'js': 'script:js',
             'jss': 'script:src',
             'js:src': 'script:src',
             'jssrc': 'script:src',
